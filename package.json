@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "tsc --project ./ && node dist/server.js",
+    "start": "node dist/server.js",
     "build": "tsc --project ./",
     "start:dev": "nodemon src/server.ts",
     "start:prod": "node dist/server.js",
@@ -12,6 +12,7 @@
     "postinstall": "tsc",
     "deploy": "git add . && git commit -m Heroku && git push heroku master"
   },
+  "heroku-run-build-script": true,
   "dependencies": {
     "express": "^4.17.2",
     "jwt-decode": "^3.1.2",
