@@ -6,6 +6,7 @@ const decode = require("./routes/decode");
 
 const routes = Router();
 
+routes.get("/", json.get);
 routes.get("/json", json.get);
 routes.get("/delay", delay.get);
 routes.get("/decode", decode.get);
