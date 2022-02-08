@@ -8,7 +8,9 @@
     "build": "tsc --project ./",
     "start:dev": "nodemon src/server.ts",
     "start:prod": "node dist/server.js",
-    "lint": "tslint --project tsconfig.json"
+    "lint": "tslint --project tsconfig.json",
+    "postinstall": "tsc",
+    "deploy": "git add . && git commit -m Heroku && git push heroku master"
   },
   "dependencies": {
     "express": "^4.17.2",
