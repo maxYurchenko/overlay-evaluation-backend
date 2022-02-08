@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/server.js",
+    "start": "nodemon src/server.ts",
     "build": "tsc --project ./",
     "start:dev": "nodemon src/server.ts",
     "start:prod": "node dist/server.js",
