@@ -1,4 +1,4 @@
-# OverlayAnalytics evaluation bakend from Maksym Yurchenko
+# OverlayAnalytics evaluation backend from Maksym Yurchenko
 
 App is built using nodejs, express, typescript and yarn.
 
