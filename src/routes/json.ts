@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from "express";
 const request = require("request");
 
 function get(req: Request, res: Response, next: NextFunction) {
+  console.log(1);
   try {
     const url = "https://jsonplaceholder.typicode.com/todos";
 
