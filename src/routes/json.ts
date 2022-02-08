@@ -5,12 +5,12 @@ function get(req: Request, res: Response, next: NextFunction) {
   try {
     const url = "https://jsonplaceholder.typicode.com/todos";
 
-    request(url, (error: Error, response: Response, body: Body) => {
+    request(url, (error: Error, response: Response, body: string) => {
       try {
-        if (!response || response.statusCode !== 200)
+        if (!response || response.statusCode !== 200 || !body)
           throw new Error("Error happened during data fetch");
 
-        res.json(body);
+        res.json(JSON.parse(body));
       } catch (err) {
         next(err);
       }
